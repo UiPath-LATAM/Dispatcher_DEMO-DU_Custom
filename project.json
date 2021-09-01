@@ -1,0 +1,67 @@
+{
+  "name": "Dispatcher_DEMO-DU_Custom",
+  "description": "Dispatcher for DEMO-DU_Custom",
+  "main": "DU-Dispatcher-AT.xaml",
+  "dependencies": {
+    "UiPath.Excel.Activities": "[2.10.4]",
+    "UiPath.FormActivityLibrary": "[1.1.11]",
+    "UiPath.Persistence.Activities": "[1.2.2]",
+    "UiPath.System.Activities": "[21.4.1]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "21.4.4.0",
+  "projectVersion": "1.0.11",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "isPausable": true,
+    "requiresUserInteraction": false,
+    "supportsPersistence": true,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": true
+  },
+  "expressionLanguage": "CSharp",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "10f0b544-2aee-4a6b-a1b7-5c77fe3c1f0e",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "DU-Dispatcher-AT.xaml",
+      "uniqueId": "6626c056-e144-44f2-961f-e13f485ee8ec",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "DU-Dispatcher-AC.xaml",
+      "uniqueId": "8f40c64c-6aca-40b4-bb10-e671b834bc9c",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Legacy"
+}
