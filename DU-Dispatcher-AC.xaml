@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1770,919" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:upaj="clr-namespace:UiPath.Persistence.Activities.Job;assembly=UiPath.Persistence.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1842,988" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upaj="clr-namespace:UiPath.Persistence.Activities.Job;assembly=UiPath.Persistence.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -68,57 +68,68 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="468,754" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="546,923" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ParallelForEach x:TypeArguments="x:String" DisplayName="Parallel For Each" sap:VirtualizedContainerService.HintSize="426,662" sap2010:WorkflowViewState.IdRef="ParallelForEach`1_1">
-      <ParallelForEach.Values>
-        <InArgument x:TypeArguments="scg:IEnumerable(x:String)">
-          <mca:CSharpValue x:TypeArguments="scg:IEnumerable(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)+"\\Desktop\\DEMO-DU\\inputFIles")</mca:CSharpValue>
-        </InArgument>
-      </ParallelForEach.Values>
-      <ActivityAction x:TypeArguments="x:String">
-        <ActivityAction.Argument>
-          <DelegateInArgument x:TypeArguments="x:String" Name="item" />
-        </ActivityAction.Argument>
-        <Sequence sap:VirtualizedContainerService.HintSize="376,514" sap2010:WorkflowViewState.IdRef="Sequence_4">
-          <Sequence.Variables>
-            <Variable x:TypeArguments="upaj:JobData" Name="duJob" />
-          </Sequence.Variables>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="504,831" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="468,753" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <upaj:StartJobAndGetReference TimeoutMs="{x:Null}" DisplayName="Start Job And Get Reference" sap:VirtualizedContainerService.HintSize="334,220" sap2010:WorkflowViewState.IdRef="StartJobAndGetReference_1" ProcessName="DEMO-DU_Custom-AC">
-            <upaj:StartJobAndGetReference.JobArguments>
-              <InArgument x:TypeArguments="x:String" x:Key="in_TargetFile">
-                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">Path.GetFullPath(item)</mca:CSharpValue>
+          <ParallelForEach x:TypeArguments="x:String" DisplayName="Parallel For Each" sap:VirtualizedContainerService.HintSize="426,661" sap2010:WorkflowViewState.IdRef="ParallelForEach`1_1">
+            <ParallelForEach.Values>
+              <InArgument x:TypeArguments="scg:IEnumerable(x:String)">
+                <mca:CSharpValue x:TypeArguments="scg:IEnumerable(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)+"\\_WFOLDER\\POC-DEMOS\\DEMO-DU\\inputFIles")</mca:CSharpValue>
               </InArgument>
-            </upaj:StartJobAndGetReference.JobArguments>
-            <upaj:StartJobAndGetReference.JobOutput>
-              <OutArgument x:TypeArguments="upaj:JobData">
-                <mca:CSharpReference x:TypeArguments="upaj:JobData" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">duJob</mca:CSharpReference>
-              </OutArgument>
-            </upaj:StartJobAndGetReference.JobOutput>
-          </upaj:StartJobAndGetReference>
-          <upaj:WaitForJobAndResume StatusMessage="{x:Null}" TimeoutMs="{x:Null}" WaitItemDataObject="{x:Null}" DisplayName="Wait for Job and Resume" sap:VirtualizedContainerService.HintSize="334,162" sap2010:WorkflowViewState.IdRef="WaitForJobAndResume_1">
-            <upaj:WaitForJobAndResume.JobInput>
-              <InArgument x:TypeArguments="upaj:JobData">
-                <mca:CSharpValue x:TypeArguments="upaj:JobData" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">duJob</mca:CSharpValue>
-              </InArgument>
-            </upaj:WaitForJobAndResume.JobInput>
-            <upaj:WaitForJobAndResume.JobOutput>
-              <OutArgument x:TypeArguments="upaj:JobData">
-                <mca:CSharpReference x:TypeArguments="upaj:JobData" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">duJob</mca:CSharpReference>
-              </OutArgument>
-            </upaj:WaitForJobAndResume.JobOutput>
-          </upaj:WaitForJobAndResume>
+            </ParallelForEach.Values>
+            <ActivityAction x:TypeArguments="x:String">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:String" Name="item" />
+              </ActivityAction.Argument>
+              <Sequence sap:VirtualizedContainerService.HintSize="376,514" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="upaj:JobData" Name="duJob" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <upaj:StartJobAndGetReference TimeoutMs="{x:Null}" DisplayName="Start Job And Get Reference" sap:VirtualizedContainerService.HintSize="334,220" sap2010:WorkflowViewState.IdRef="StartJobAndGetReference_1" ProcessName="DEMO-DU_Custom-AC">
+                  <upaj:StartJobAndGetReference.JobArguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_TargetFile">
+                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">Path.GetFullPath(item)</mca:CSharpValue>
+                    </InArgument>
+                  </upaj:StartJobAndGetReference.JobArguments>
+                  <upaj:StartJobAndGetReference.JobOutput>
+                    <OutArgument x:TypeArguments="upaj:JobData">
+                      <mca:CSharpReference x:TypeArguments="upaj:JobData" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">duJob</mca:CSharpReference>
+                    </OutArgument>
+                  </upaj:StartJobAndGetReference.JobOutput>
+                </upaj:StartJobAndGetReference>
+                <upaj:WaitForJobAndResume StatusMessage="{x:Null}" TimeoutMs="{x:Null}" WaitItemDataObject="{x:Null}" DisplayName="Wait for Job and Resume" sap:VirtualizedContainerService.HintSize="334,162" sap2010:WorkflowViewState.IdRef="WaitForJobAndResume_1">
+                  <upaj:WaitForJobAndResume.JobInput>
+                    <InArgument x:TypeArguments="upaj:JobData">
+                      <mca:CSharpValue x:TypeArguments="upaj:JobData" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">duJob</mca:CSharpValue>
+                    </InArgument>
+                  </upaj:WaitForJobAndResume.JobInput>
+                  <upaj:WaitForJobAndResume.JobOutput>
+                    <OutArgument x:TypeArguments="upaj:JobData">
+                      <mca:CSharpReference x:TypeArguments="upaj:JobData" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">duJob</mca:CSharpReference>
+                    </OutArgument>
+                  </upaj:WaitForJobAndResume.JobOutput>
+                </upaj:WaitForJobAndResume>
+              </Sequence>
+            </ActivityAction>
+          </ParallelForEach>
         </Sequence>
-      </ActivityAction>
-    </ParallelForEach>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
   </Sequence>
 </Activity>
